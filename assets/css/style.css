@@ -84,20 +84,12 @@ body {
     max-height: 580px; 
     z-index: 1;
     background: white;
-    border-bottom: 30px solid white; 
+    border-bottom: 15px solid white; 
     padding: 0px 40px 10px 40px;
     margin: 0 auto;
     overflow: scroll;
   }
-  /* .containerBody {
-    padding-top: 30px;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-
- 
   
-
 /*
   ========================================
   footer

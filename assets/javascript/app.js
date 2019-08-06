@@ -50,7 +50,7 @@ function displayDesignerInfo() {
          var designerDiv = $("<div class='designer' style='float: left'>");  // Creates a div to hold the designer
         var designerImage = $("<img class='col-6 gifs img-responsive' style='max-width: 100%'>");  // Creates an element to hold the image 
         designerImage.attr("src", results[i].images.fixed_height.url); // Sets the src attribute of the image to a property pulled off the result item
-
+        
         designerDiv.append(designerImage);   // Appends the image
 
          var rating = $('<p class="text">').text("Rating: " + results[i].rating);   //Creates an element to hold the rating  
@@ -80,18 +80,21 @@ Render Buttons
             var d = $("<button class='btn-block topics'>");             // creates new buttons 
             d.addClass("designer-btn");       // Adds a class to each button
             d.attr("data-name", topics[i]);  // Adds a data-attribute
-            d.text(topics[i]);              // Provides the initial button text
+            d.text(topics[i]);              // Provides the initial  }button text
+        
             $("#buttons-view").append(d);  // Adds the button to the buttons-view div
         }
+    }
 
         $("#get-inspired").on("click", function(event) {
+            $("#get-inspired").empty(); 
             event.preventDefault();
         
             var des = $("#designer-input").val().trim();
             topics.push(des); // Adds designer from the textbox to our array
             renderButtons();
         });
-    }
+    
 
       // Addes a click event listener to all elements with a class of "designer-btn"
       $(document).on("click", ".designer-btn", displayDesignerInfo);
@@ -99,48 +102,10 @@ Render Buttons
       // Calls the renderButtons function to display the intial buttons
       renderButtons();
 
-
-
-// Get the elements with class="column"
-// var elements = $("rightColumn");
-
-
-// Full-width images
-// function one() {
-//     for (i = 0; i < elements.length; i++) {
-//     elements[i].style.msFlex = "100%";  // IE10
-//     elements[i].style.flex = "100%";
-//   }
-// }
-
-// Two images side by side
-// function two() {
-//   for (i = 0; i < elements.length; i++) {
-//     elements[i].style.msFlex = "50%";  // IE10
-//     elements[i].style.flex = "50%";
-//   }
-// }
-
-// Four images side by side
-// function four() {
-//   for (i = 0; i < elements.length; i++) {
-//     elements[i].style.msFlex = "25%";  // IE10
-//     elements[i].style.flex = "25%";
-//   }
-// }
-
-// Add active class to the current button (highlight it)
-// var header = document.getElementById("myHeader");
-// var btns = header.getElementsByClassName("btn");
-// for (var i = 0; i < btns.length; i++) {
-//   btns[i].addEventListener("click", function() {
-//     var current = document.getElementsByClassName("active");
-//     current[0].className = current[0].className.replace(" active", "");
-//     this.className += " active";
-//   });
-// }
-
-
-
+/*
+========================================
+Pause gifs
+========================================
+*/
 
 }); 
