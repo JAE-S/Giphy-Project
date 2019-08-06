@@ -57,30 +57,32 @@
                 </div>
 
                 <!-- Giphy & Search Container -->
-                <div class="row d-flex flex-column flex-md-row align-items-center containerBody"> 
+                <div class="row d-flex flex-column flex-md-row text-top containerBody"> 
                     
                     <!-- Left side -->
                     <div class="col-lg-4" style="max-width: 33%"> 
                         <!-- Search form -->
-                        <div class="col-lg-">
+                        <div class="form-group row text-top">
+                            <!-- <div class="col-"> -->
+                            <input id="add-designer" type="submit" value="Add a designer">
+
                             <form id="designer-form">
                                 <label for="artist-input"></label>
                                     <input type="text" id="designer-input">
                                   <!-- Button triggers new movie to be added -->
-                                  <div class="col-lg-">
-                                <input id="add-designer" type="submit" value="Add a designer">
+                        
                             </form>
                         </div>
                     
                         <!-- Buttons List -->
-                        <div class="col-lg-">
+                        <div>
                              <!-- Rendered Buttons will get Dumped Here  -->
                             <div id="buttons-view"></div>
                         </div>
                     </div>  
 
                     <!-- Right Side - Giphy Grid -->
-                    <div class="col-lg-8" style="max-width: 50%">
+                    <div class="col-lg-8" style="max-width: 66%">
                      <!-- Movies will Get Dumped Here -->
                         <div id="designer-view"></div>
                     </div>

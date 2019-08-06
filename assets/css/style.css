@@ -154,7 +154,7 @@ p {
 
 /*
   ========================================
-  Typography - Trivia Project
+  Typography - Giphy Project
   ========================================
 */
 
@@ -165,4 +165,11 @@ p {
   Buttons
   ========================================
 */
+
+.gifs {
+  max-width: 200px;
+  width: auto; 
+  max-height: 200px; 
+  height: auto; 
+}
 

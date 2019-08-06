@@ -48,8 +48,8 @@ function displayDesignerInfo() {
         var results = response.data;    // Stores data from the AJAX request 
         for (var i = 0; i < results.length; i++){   // Loops the result items
 
-         var designerDiv = $("<div class='designer'>");  // Creates a div to hold the designer
-        var designerImage =  $('<img>');  // Creates an element to hold the image 
+         var designerDiv = $("<div class='designer' style='float: left'>");  // Creates a div to hold the designer
+        var designerImage = $("<img class='col-lg-4 gifs'>");  // Creates an element to hold the image 
         designerImage.attr("src", results[i].images.fixed_height.url); // Sets the src attribute of the image to a property pulled off the result item
 
         designerDiv.append(designerImage);   // Appends the image
@@ -62,7 +62,7 @@ function displayDesignerInfo() {
 
          designerDiv.append(usernameP); // Displays the username 
 
-         $('#designer-view').prepend(designerDiv)  // Adds new desinger above the previous designers 
+         $('#designer-view').after(designerDiv)  // Adds new desinger above the previous designers 
         }
 });
 } 
@@ -78,7 +78,7 @@ Render Buttons
 
         for (var i = 0; i < topics.length; i++) {  // Loops through the topics array
             console.log(topics.length); 
-            var d = $("<button>");             // creates new buttons 
+            var d = $("<button class='btn-block'>");             // creates new buttons 
             d.addClass("designer-btn");       // Adds a class to each button
             d.attr("data-name", topics[i]);  // Adds a data-attribute
             d.text(topics[i]);              // Provides the initial button text
