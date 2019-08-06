@@ -40,40 +40,30 @@
 
         <!-- Main Section -->
         <main class="background"> 
-
-            <div class="container2 text-center"> 
+           
+            <div class="container2 text-center title"> 
                 <!-- Header -->
-                <div class="row d-flex flex-column flex-md-row align-items-center">
+                <div class="row d-flex flex-column flex-md-row align-items-center padding">
                     <h1 class="my-0 mr-md-auto">Giphy Generator</h1> 
-                    <div class="my-2 my-md-0 mr-md-0">
-                        <p>Click on the buttons to change the grid view.</p> 
+                    <div class="form-group row my-2 my-md-0 mr-md-0">
+                            <form id="designer-form">
+                                <label for="artist-input"></label>
+                                <input type="text" id="designer-input">
+                            </form>
+                            <input id="get-inspired" type="submit" value="Get Inspired">   
+                      
                     </div>
                 </div>
-
-                <div class="row text-center">
-                    <button class="btn" onclick="one()">1</button>
-                    <button class="btn active" onclick="two()">2</button>
-                    <button class="btn" onclick="four()">4</button>
-                </div>
+            </div>
+            <div class="container3 text-center"> 
 
                 <!-- Giphy & Search Container -->
-                <div class="row d-flex flex-column flex-md-row text-top containerBody"> 
+                <div class="row d-flex flex-column flex-md-row text-top padding2"> 
                     
                     <!-- Left side -->
                     <div class="col-lg-4" style="max-width: 33%"> 
                         <!-- Search form -->
-                        <div class="form-group row text-top">
-                            <!-- <div class="col-"> -->
-                            <input id="add-designer" type="submit" value="Add a designer">
-
-                            <form id="designer-form">
-                                <label for="artist-input"></label>
-                                    <input type="text" id="designer-input">
-                                  <!-- Button triggers new movie to be added -->
-                        
-                            </form>
-                        </div>
-                    
+                       
                         <!-- Buttons List -->
                         <div>
                              <!-- Rendered Buttons will get Dumped Here  -->
@@ -82,19 +72,13 @@
                     </div>  
 
                     <!-- Right Side - Giphy Grid -->
-                    <div class="col-lg-8" style="max-width: 66%">
+                    <div class="row designer" style="max-width: 66%">
                      <!-- Movies will Get Dumped Here -->
                         <div id="designer-view"></div>
                     </div>
 
                 </div>
             </div>  
-
-                    <!-- <div class="row">
-                        <button class="text-center btn-block" id="playButton">PLAY!</button>
-                    </div> -->
-    
-   
 
         </main>
 

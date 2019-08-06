@@ -13,15 +13,14 @@ GLOBAL VARIABLES
 ========================================
 */
 
-    var topics = ["Op Art",              
-                  "xponentialdesign", 
-                  "Robert Hruska", 
-                  "connorbell", 
-                  "Mathew Lucas", 
-                  "Trippyogi", 
-                  "VIRTUTE", 
-                  "partyonmarz", 
-                  "@shonk"];
+    var topics = ["OP ART",
+                  "XPONENTIALDESIGN", 
+                  "ROBERT HRUSKA", 
+                  "TRIPPYOGI",  
+                  "VIRTUTE",
+                  "@CONNORBELL", 
+                  "@PARTYONMARZ", 
+                  "@SHONK"];
 
 /*
 ========================================
@@ -49,16 +48,16 @@ function displayDesignerInfo() {
         for (var i = 0; i < results.length; i++){   // Loops the result items
 
          var designerDiv = $("<div class='designer' style='float: left'>");  // Creates a div to hold the designer
-        var designerImage = $("<img class='col-lg-4 gifs'>");  // Creates an element to hold the image 
+        var designerImage = $("<img class='col-6 gifs img-responsive' style='max-width: 100%'>");  // Creates an element to hold the image 
         designerImage.attr("src", results[i].images.fixed_height.url); // Sets the src attribute of the image to a property pulled off the result item
 
         designerDiv.append(designerImage);   // Appends the image
 
-         var rating = $('<p>').text("Rating: " + results[i].rating);   //Creates an element to hold the rating  
+         var rating = $('<p class="text">').text("Rating: " + results[i].rating);   //Creates an element to hold the rating  
 
          designerDiv.append(rating);  // Displays the rating data 
 
-         var usernameP = $('<p>').text("Username: " + results[i].username);// Stores the username
+         var usernameP = $('<p class="text">').text("Username: " + results[i].username);// Stores the username
 
          designerDiv.append(usernameP); // Displays the username 
 
@@ -78,14 +77,14 @@ Render Buttons
 
         for (var i = 0; i < topics.length; i++) {  // Loops through the topics array
             console.log(topics.length); 
-            var d = $("<button class='btn-block'>");             // creates new buttons 
+            var d = $("<button class='btn-block topics'>");             // creates new buttons 
             d.addClass("designer-btn");       // Adds a class to each button
             d.attr("data-name", topics[i]);  // Adds a data-attribute
             d.text(topics[i]);              // Provides the initial button text
             $("#buttons-view").append(d);  // Adds the button to the buttons-view div
         }
 
-        $("#add-designer").on("click", function(event) {
+        $("#get-inspired").on("click", function(event) {
             event.preventDefault();
         
             var des = $("#designer-input").val().trim();
