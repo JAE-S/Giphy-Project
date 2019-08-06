@@ -40,19 +40,59 @@
 
         <!-- Main Section -->
         <main class="background"> 
-            <section class=""><!-- Start of Section -->
 
-                <div class="container2 text-center"> 
-                <!-- Crazy State Laws -->
-                    <h1>Giphy Generator</h1> 
-                    <!-- <p></p>  -->
+            <div class="container2 text-center"> 
+                <!-- Header -->
+                <div class="row d-flex flex-column flex-md-row align-items-center">
+                    <h1 class="my-0 mr-md-auto">Giphy Generator</h1> 
+                    <div class="my-2 my-md-0 mr-md-0">
+                        <p>Click on the buttons to change the grid view.</p> 
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <button class="btn" onclick="one()">1</button>
+                    <button class="btn active" onclick="two()">2</button>
+                    <button class="btn" onclick="four()">4</button>
+                </div>
+
+                <!-- Giphy & Search Container -->
+                <div class="row d-flex flex-column flex-md-row align-items-center containerBody"> 
+                    
+                    <!-- Left side -->
+                    <div class="col-lg-4" style="max-width: 33%"> 
+                        <!-- Search form -->
+                        <div class="col-lg-">
+                            <form id="designer-form">
+                                <label for="artist-input"></label>
+                                    <input type="text" id="designer-input">
+                                  <!-- Button triggers new movie to be added -->
+                                  <div class="col-lg-">
+                                <input id="add-designer" type="submit" value="Add a designer">
+                            </form>
+                        </div>
+                    
+                        <!-- Buttons List -->
+                        <div class="col-lg-">
+                             <!-- Rendered Buttons will get Dumped Here  -->
+                            <div id="buttons-view"></div>
+                        </div>
+                    </div>  
+
+                    <!-- Right Side - Giphy Grid -->
+                    <div class="col-lg-8" style="max-width: 50%">
+                     <!-- Movies will Get Dumped Here -->
+                        <div id="designer-view"></div>
+                    </div>
+
+                </div>
+            </div>  
 
                     <!-- <div class="row">
                         <button class="text-center btn-block" id="playButton">PLAY!</button>
                     </div> -->
-                </div>
     
-            </section><!-- End of Section -->
+   
 
         </main>
 
@@ -66,7 +106,8 @@
          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-         <!-- Game JavaScript -->
+        <!-- Game JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="assets/javascript/app.js" type="text/javascript"></script>
     </body>
 </html> 
