@@ -1,0 +1,150 @@
+/*
+========================================
+Giphy - Media screens
+========================================
+*/
+
+@media screen and (max-width: 901px) and (min-width: 600px) {
+
+  /*
+    ========================================
+    Main
+    ========================================
+  */
+  
+    .container2 {
+      max-width: 960px;
+      max-height: 1000px; 
+      z-index: 1;
+      background: white;
+      padding: 40px 40px 10px 40px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      margin: 0 auto;
+    }
+    
+    .container3 {
+      max-width: 960px;
+      max-height: 1000px; 
+      flex-grow: 2;
+      z-index: 1;
+      background: white;
+      border-bottom: 15px solid white; 
+      padding: 0px 40px 10px 40px;
+      margin: 0 auto;
+      overflow: scroll;
+    }
+    
+  /*
+    ========================================
+    footer
+    ========================================
+  */
+  
+  footer {
+    background: white;
+    font-family: 'Raleway', sans-serif;
+    border-top: .25px solid silver;
+    color: black;
+    z-index: 1;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    position: static; 
+  }
+  
+  /*
+    ========================================
+    Typography - Portfolio Styling
+    ========================================
+  */
+  h4 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    line-height: 40px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    text-decoration: none;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+   
+  }
+  
+  h2 {
+    font-size: 2rem;
+    text-decoration: none;
+    color: grey;
+    text-align: left;
+    font-family: 'Georgia', Times, 'Times New Roman', Times, serif;
+    margin-right: 1.5rem;
+  }
+  
+  p {
+    font-family: 'Raleway', sans-serif;
+    color: #777777;
+  }
+  
+  /*
+    ========================================
+    Typography - Giphy Project
+    ========================================
+  */
+  
+  
+  
+   /*
+    ========================================
+    Buttons
+    ========================================
+  */
+  
+  .gifs {
+    width: 179px; 
+    height: 150px; 
+  }
+  
+  #add-designer {
+    margin: 0 auto;
+  }
+  
+  .padding {
+    padding: 0px 5px; 
+    padding-bottom: 20px; 
+    margin: 0px 5px; 
+    border-bottom: 1px solid grey; 
+  }
+  
+  .padding2 {
+    padding-top: 20px; 
+    padding-bottom: 20px;
+  }
+  
+  
+  .topics {
+    font-size: 16px; 
+    font-family: arial;
+    color: grey; 
+    padding: 5px; 
+  }
+  
+  .designer {
+    margin: 0 auto; 
+    align-items: left; 
+    padding: 0; 
+    
+  }
+  
+  .text {
+    font-size: 16px; 
+    line-height: 1;
+    font-family: arial;
+    color: grey; 
+    padding: 5px; 
+    margin: 0px 10px; 
+  }
+  
+  .title {
+    position: static; 
+  }
+  } 

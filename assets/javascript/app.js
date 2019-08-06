@@ -22,6 +22,8 @@ GLOBAL VARIABLES
                   "@PARTYONMARZ", 
                   "@SHONK"];
 
+                 
+
 /*
 ========================================
 Display Designer Info 
@@ -47,21 +49,36 @@ function displayDesignerInfo() {
         var results = response.data;    // Stores data from the AJAX request 
         for (var i = 0; i < results.length; i++){   // Loops the result items
 
-         var designerDiv = $("<div class='designer' style='float: left'>");  // Creates a div to hold the designer
-        var designerImage = $("<img class='col-6 gifs img-responsive' style='max-width: 100%'>");  // Creates an element to hold the image 
-        designerImage.attr("src", results[i].images.fixed_height.url); // Sets the src attribute of the image to a property pulled off the result item
+            // var still = designerImage.results[i].images.fixed_height_still.url;
+            // var animate = designerImage.results[i].images.fixed_height.url;
         
-        designerDiv.append(designerImage);   // Appends the image
+            var designerDiv = $("<div class='designer col-6' style='float: left'>");  
+            // Creates a div to hold the designer
+            var designerImage = $("<img class='img-responsive' style='max-width: 100%'>");  // Creates an element to hold the image 
+            designerImage.attr("src", results[i].images.fixed_height_still.url) // Sets the src attribute of the image to a property pulled off the result item
+            designerImage.attr("class", "gifs");
+            
+            // designerImage.attr("data-still", still);
+            // designerImage.attr("data-animate", animate);
+            // designerImage.attr("data-state", still);
+            
+            designerImage.attr("data-still", results[i].images.fixed_height_still.url);
+            designerImage.attr("data-animate", results[i].images.fixed_height.url);
+            designerImage.attr("data-state", "animate");
 
-         var rating = $('<p class="text">').text("Rating: " + results[i].rating);   //Creates an element to hold the rating  
 
-         designerDiv.append(rating);  // Displays the rating data 
 
-         var usernameP = $('<p class="text">').text("Username: " + results[i].username);// Stores the username
+            designerDiv.append(designerImage);   // Appends the image
 
-         designerDiv.append(usernameP); // Displays the username 
+            var rating = $('<p class="text">').text("Rating: " + results[i].rating);   //Creates an element to hold the rating  
 
-         $('#designer-view').after(designerDiv)  // Adds new desinger above the previous designers 
+            designerDiv.append(rating);  // Displays the rating data 
+
+            var usernameP = $('<p class="text">').text("Username: " + results[i].username);// Stores the username
+
+            designerDiv.append(usernameP); // Displays the username 
+
+            $('#designer-view').after(designerDiv)  // Adds new desinger above the previous designers 
         }
 });
 } 
@@ -107,5 +124,36 @@ Render Buttons
 Pause gifs
 ========================================
 */
+
+$(document).on("click", ".gifs", function() {
+    console.log("test")
+    // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
+    var state = $(this).attr("data-state");
+    // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+    // Then, set the image's data-state to animate
+    // Else set src to the data-still value
+    if (state === 'still') {
+      $(this).attr("src", $(this).attr("data-animate"));
+      $(this).attr("data-state", 'animate');
+    } else {
+      $(this).attr("src", $(this).attr("data-still"));
+      $(this).attr("data-state", 'still');
+    }
+  });
+
+
+
+/*
+========================================
+Adding vimeo 
+========================================
+// */
+// var artists = $(this).attr("data-name");
+// var queryURL = " 7754a8b0f5cacbac60b3b7462731c0b86a6391c4
+
+
+
+
+
 
 }); 

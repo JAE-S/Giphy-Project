@@ -11,6 +11,7 @@ Giphy - Layout
     box-sizing: border-box;
   }
 
+  @media screen and (max-width:1500px){
 /*
   ========================================
   Header - Nav Bar
@@ -156,9 +157,7 @@ p {
 */
 
 .gifs {
-  /* max-width: 300px; */
   width: 270px; 
-
   height: 250px; 
 }
 
@@ -186,7 +185,7 @@ p {
   padding: 5px; 
 }
 
-.designer {
+.designer1 {
   margin: 0 auto; 
   align-items: right; 
   
@@ -203,4 +202,5 @@ p {
 
 .title {
   position: static; 
+}
 }
