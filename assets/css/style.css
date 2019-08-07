@@ -11,7 +11,7 @@ Giphy - Layout
     box-sizing: border-box;
   }
 
-  @media screen and (max-width:1500px){
+  @media screen and (min-width:902px){
 /*
   ========================================
   Header - Nav Bar
@@ -157,8 +157,8 @@ p {
 */
 
 .gifs {
-  width: 270px; 
-  height: 250px; 
+  width: auto; 
+  height: 200px;
 }
 
 #add-designer {
@@ -166,9 +166,9 @@ p {
 }
 
 .padding {
-  padding: 0px 5px; 
+  margin: 0 10px; 
   padding-bottom: 20px; 
-  margin: 0px 5px; 
+  /* margin: 0px 5px;  */
   border-bottom: 1px solid grey; 
 }
 
@@ -188,19 +188,44 @@ p {
 .designer1 {
   margin: 0 auto; 
   align-items: right; 
+
   
+}
+.designer {
+  width: 220px; 
+  height: 260px;
+  background: silver; 
+  margin-bottom: 20px; 
+}
+.data {
+  width: 200px; 
+  margin: 0 auto; 
 }
 
 .text {
   font-size: 16px; 
+  /* text-align: center;  */
   line-height: 1;
   font-family: arial;
   color: grey; 
   padding: 5px; 
-  margin: 0px 10px; 
+  /* margin: 0px 10px;  */
 }
 
 .title {
   position: static; 
+}
+
+.row {
+  margin: 0; 
+  padding-right: 0; 
+}
+
+.col-lg-4 {
+  padding-left: 0; 
+}
+
+.col-6 {
+  padding-right: 0; 
 }
 }

@@ -52,8 +52,7 @@ function displayDesignerInfo() {
             // var still = designerImage.results[i].images.fixed_height_still.url;
             // var animate = designerImage.results[i].images.fixed_height.url;
         
-            var designerDiv = $("<div class='designer col-6' style='float: left'>");  
-            // Creates a div to hold the designer
+            var designerDiv = $("<div class='designer col-6 text-center align-items-center'>"); // Creates a div to hold the designer
             var designerImage = $("<img class='img-responsive' style='max-width: 100%'>");  // Creates an element to hold the image 
             designerImage.addClass("gifs");
             
@@ -63,17 +62,17 @@ function displayDesignerInfo() {
             designerImage.attr("data-state", "still");
             designerImage.attr("alt", "Giphy"); 
           
-
-
             designerDiv.append(designerImage);   // Appends the image
 
+            var dataDiv = $("<div class='data text-center align-items-center' style='max-width: 100%'>"); 
             var rating = $('<p class="text">').text("Rating: " + results[i].rating);   //Creates an element to hold the rating  
 
-            designerDiv.append(rating);  // Displays the rating data 
+            dataDiv.append(rating);  // Displays the rating data 
 
             var usernameP = $('<p class="text">').text("Username: " + results[i].username);// Stores the username
 
-            designerDiv.append(usernameP); // Displays the username 
+            dataDiv.append(usernameP); // Displays the username 
+            designerDiv.append(dataDiv); // Displays the username 
 
             $('#designer-view').after(designerDiv)  // Adds new desinger above the previous designers 
         }
