@@ -55,17 +55,14 @@ function displayDesignerInfo() {
             var designerDiv = $("<div class='designer col-6' style='float: left'>");  
             // Creates a div to hold the designer
             var designerImage = $("<img class='img-responsive' style='max-width: 100%'>");  // Creates an element to hold the image 
+            designerImage.addClass("gifs");
+            
             designerImage.attr("src", results[i].images.fixed_height_still.url) // Sets the src attribute of the image to a property pulled off the result item
-            designerImage.attr("class", "gifs");
-            
-            // designerImage.attr("data-still", still);
-            // designerImage.attr("data-animate", animate);
-            // designerImage.attr("data-state", still);
-            
             designerImage.attr("data-still", results[i].images.fixed_height_still.url);
             designerImage.attr("data-animate", results[i].images.fixed_height.url);
-            designerImage.attr("data-state", "animate");
-
+            designerImage.attr("data-state", "still");
+            designerImage.attr("alt", "Giphy"); 
+          
 
 
             designerDiv.append(designerImage);   // Appends the image
