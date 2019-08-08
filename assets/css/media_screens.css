@@ -4,7 +4,7 @@ Giphy - Media screens
 ========================================
 */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (min-width: 767px){
 
 /*
 ========================================
@@ -121,6 +121,7 @@ footer {
   padding-top: 30px;
   position: static; 
   z-index: 1;
+  position: sticky; 
 }
 
 /*
@@ -181,6 +182,7 @@ p {
 
 .col-lg-4 {
   padding-left: 0; 
+  padding-right: 2vw; 
 }
 
 .col-6 {
@@ -205,8 +207,8 @@ p {
   font-size: 14.5px; 
   line-height: 1;
   padding: .5vh; 
+ 
 }
-
 
  /*
 ========================================
@@ -238,7 +240,7 @@ Gifs
 */
 .gifs {
   max-height: 22.2vh;
-  height: 22.2vh;
+  height: auto;
   max-width: 100%; 
   min-width: 1px; 
   display: inline-block; 
@@ -254,9 +256,8 @@ Gifs
 
 .designer {
   margin: 0 auto;
-  background: silver; 
   height: 28.82vh;
-  margin-bottom: 20px; 
+  margin-bottom: 1.5vh; 
   width: 16.57vw; 
   padding: .5vw;
 }
@@ -264,6 +265,7 @@ Gifs
 .data {
   margin: 0 auto; 
   width: 200px; 
+ 
 }
 
 .dropdown {
@@ -279,164 +281,288 @@ Gifs
 
 } 
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
   
   /*
   ========================================
   Main
   ========================================
   */
-  
-  /* .container2 {
-    background: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 0 auto;
-    max-height: 600px; 
-    max-width: 960px;
-    padding: 40px 40px 10px 40px;
-    z-index: 1;  
-  }
-    
-  .container3 { 
-    background: white;
-    border-bottom: 15px solid white; 
-    max-height: 580px; 
-    max-width: 960px;
-    margin: 0 auto;
-    overflow: scroll;
-    padding: 0px 40px 10px 40px;  
-    z-index: 1;
-  } */
-    
-  /*
-    ========================================
-    footer
-    ========================================
-  */
-  
-  /* footer {
-    background: white;
-    border-top: .25px solid silver;
-    color: black;
-    font-family: 'Raleway', sans-serif;
-    padding-bottom: 10px;
-    padding-top: 30px;
-    position: static; 
-    z-index: 1;
-  } */
-  
-  /*
-    ========================================
-    Layout - Giphy Project
-    ========================================
-  */
-  /* .padding {
-    border-bottom: 1px solid grey; 
-    margin: 0 10px; 
-    padding-bottom: 20px; 
-  }
-  
-  .padding2 {
-    padding-bottom: 20px;
-    padding-top: 20px; 
-  }
-  
-  .row {
-    margin: 0; 
-    padding-right: 0; 
-  }
-  
-  .title {
-    position: static; 
-  }
-  
-  .col-lg-4 {
-    padding-left: 0; 
-  }
-  
-  .col-6 {
-    padding-left: 0; 
-    padding-right: 0; 
-  }
-   */
-  /*
-    ========================================
-    Typography - Giphy Project
-    ========================================
-  */
-  
-  /* .container2 h1 {
-    font-family: 'Text Me One', sans-serif;
-    font-size: 32px;
-  }
-  
-  .text {
-    color: grey; 
-    font-family: arial;
-    font-size: 14.5px; 
-    line-height: 1;
-    padding: 5px; 
-  } */
-  
-  
-   /*
-  ========================================
-  Buttons
-  ========================================
-  */
-  
-  /* #get-inspired {
-    background: black;
-    color: white;
-    font-family: 'Text Me One', sans-serif;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 2px; 
-    padding: 5px; 
-  }
-  
-  .topics {
-    font-family: 'Text Me One', sans-serif;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 2px; 
-    padding: 5px;
-    background-color: silver;
-    background-image: linear-gradient(to top left, white, transparent); 
-  }
-  #designer-input {
-    border: .5px solid grey; 
-    margin-right: 5px; 
-  } */
 
-   /*
+/*
+========================================
+Header - Nav Bar
+========================================
+*/
+
+.container1 {
+  margin: 0 auto;
+  max-width: 960px;
+
+}
+
+header {
+  background: white;
+  border: 1px solid transparent;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: black;
+  font-family:'Raleway', sans-serif;
+  padding: 20px 40px 20px 40px;
+  position: static;
+  z-index: 1;
+}
+
+nav a {
+  color: black;
+  margin-left: 1rem;
+  padding: .25rem 0;
+}
+
+nav a:hover {
+  border-bottom: 2px solid black;
+  color: grey;
+  font-weight: Bold;
+  text-decoration: none;
+}
+
+/*
+========================================
+Main
+========================================
+*/
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.background {
+  background-image: url("../images/background_illusion.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-grow: 1;
+  padding: 5vh 5vw;
+  width: 100%;
+  z-index: 0;
+}
+
+.container2 {
+  background: white;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  margin: 0 auto;
+  /* max-height: 600px;  */
+  /* max-width: 960px; */
+  /* width: 960px; */
+  width: 100%;
+  /* padding: 4vh 4vw 1vh 4vw; */
+  z-index: 1;  
+}
+.masterContainer {
+  display: flex;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background: white;
+  padding: 4vh 4vw 1vh 4vw;
+  flex-direction: column;
+  margin: 0 auto;
+  /* width: 100%; */
+  max-height: 70vh;
+  height: 70vh;
+  /* width: 960px; */
+  max-width: 960px;
+  overflow: scroll;
+}
+
+.container3 {  
+  background: white;
+  border-bottom: 15px solid white; 
+  max-height: 580px; 
+  max-width: 960px;
+  width: 960px;
+  /* /* margin: 0 auto; */
+  width: 100%;
+  overflow: scroll;  
+  padding: 0vh 4vw 1vh 4vw;  
+}
+  
+/*
   ========================================
-  Gifs
+  footer
   ========================================
-  */
-  /* .gifs {
-    height: 180px;
-    width: auto; 
-  }
-  
-  #add-designer {
-    margin: 0 auto;
-  }
-  
-  .designer1 {
-    align-items: right; 
-    margin: 0 auto; 
-  }
-  
-  .designer {
-    background: silver; 
-    height: 240px;
-    margin-bottom: 20px; 
-    width: 220px; 
-  }
-  
-  .data {
-    margin: 0 auto; 
-    width: 200px; 
-  }
-  }  */
+*/
+
+footer {
+  background: white;
+  border-top: .25px solid silver;
+  color: black;
+  font-family: 'Raleway', sans-serif;
+  padding-bottom: 10px;
+  padding-top: 30px;
+  position: static; 
+  z-index: 1;
+  position: sticky; 
+}
+
+/*
+  ========================================
+  Typography - Portfolio Styling
+  ========================================
+*/
+h4 {
+  font-family: 'Raleway', sans-serif;
+  line-height: 40px;
+  font-size: 1.5rem;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+  text-decoration: none;
+}
+
+h2 {
+  color: grey;
+  font-family: 'Georgia', Times, 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  margin-right: 1.5rem;
+  text-align: left;
+  text-decoration: none;
+}
+
+p {
+  color: #777777;
+  font-family: 'Raleway', sans-serif;
+}
+/*
+  ========================================
+  Layout - Giphy Project
+  ========================================
+*/
+.padding {
+  border-bottom: 1px solid grey; 
+  margin: 0 1vw; 
+  padding-bottom: 2vh; 
+}
+
+.padding2 {
+  padding: 2vh 0vw; 
+}
+
+.row {
+  margin: 0; 
+  padding-right: 0; 
+}
+
+.title {
+  position: static; 
+}
+
+.col-lg-4 {
+  padding-left: 0; 
+  padding-right: 2vw; 
+}
+
+.col-6 {
+  padding-left: 0; 
+  padding-right: 0; 
+}
+
+/*
+  ========================================
+  Typography - Giphy Project
+  ========================================
+*/
+
+.container2 h1 {
+  font-family: 'Text Me One', sans-serif;
+  font-size: 42px;
+}
+
+.text {
+  color: grey; 
+  font-family: arial;
+  font-size: 14.5px; 
+  line-height: 1;
+  padding: .5vh; 
+ 
+}
+
+ /*
+========================================
+Buttons
+========================================
+*/
+
+#get-inspired {
+  background: black;
+  color: white;
+  font-family: 'Text Me One', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: .2vw; 
+}
+
+.topics {
+  font-family: 'Text Me One', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px; 
+  padding: .5vh .5vw;
+}
+
+ /*
+========================================
+Gifs
+========================================
+*/
+.gifs {
+  max-height: 22.2vh;
+  height: auto;
+  max-width: 100%; 
+  min-width: 1px; 
+  display: inline-block; 
+}
+
+#add-designer {
+  margin: 0 auto;
+}
+
+.designer1 {
+  margin: 0 auto; 
+}
+
+.designer {
+  margin: 0 auto;
+  height: 26.82vh;
+  width: 14.57vw; 
+  padding-right: 1.5vw;
+  padding-left: 1.5vw;
+}
+
+.data {
+  margin: 0 auto; 
+  width: 200px; 
+ 
+}
+
+.dropdown {
+  background: white; 
+  color: rgb(197, 181, 181);
+  display: show; 
+  font-family: 'Text Me One', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px; 
+  padding: .5vh .5vw;
+  z-index: 4;
+}
+
+#main-buttons {
+  display: none; 
+}
+
+  }  

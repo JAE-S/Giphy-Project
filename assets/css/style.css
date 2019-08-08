@@ -11,7 +11,7 @@ Giphy - Layout
     box-sizing: border-box;
   }
 
-  @media screen and (min-width: 1025px){
+  @media screen and (min-width: 1025px) {
 /*
 ========================================
 Header - Nav Bar
@@ -186,7 +186,8 @@ p {
 }
 
 .col-lg-4 {
-  padding-left: 0; 
+  padding-left: 0;
+  padding-right: 2vw; 
 }
 
 .col-6 {
@@ -261,7 +262,7 @@ Gifs
 .designer {
   margin: 0 auto;
   height: 28.82vh;
-  margin-bottom: 20px; 
+  margin-bottom: 1.5vh; 
   width: 16.57vw; 
   padding: .5vw;
 }
