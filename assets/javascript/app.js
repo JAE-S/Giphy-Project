@@ -22,7 +22,7 @@ GLOBAL VARIABLES
                   "@PARTYONMARZ", 
                   "@SHONK"];
 
-                 
+            
 
 /*
 ========================================
@@ -71,8 +71,8 @@ function displayDesignerInfo() {
 
             var usernameP = $('<p class="text">').text("Username: " + results[i].username);// Stores the username
 
-            dataDiv.append(usernameP); // Displays the username 
-            designerDiv.append(dataDiv); // Displays the username 
+            dataDiv.append(usernameP); // Adds the username to the dataDiv
+            designerDiv.append(dataDiv); // Adds the dataDiv to the designerDiv
 
             $('#designer-view').after(designerDiv)  // Adds new desinger above the previous designers 
         }
@@ -86,7 +86,8 @@ Render Buttons
 
     function renderButtons() {
    
-        $("#buttons-view").empty();  // Deleting the buttons prior to adding new buttons
+        $(".buttons-view").empty();   // Deleting the buttons prior to adding new buttons
+      
 
         for (var i = 0; i < topics.length; i++) {  // Loops through the topics array
             console.log(topics.length); 
@@ -94,19 +95,21 @@ Render Buttons
             d.addClass("designer-btn");       // Adds a class to each button
             d.attr("data-name", topics[i]);  // Adds a data-attribute
             d.text(topics[i]);              // Provides the initial  }button text
-        
-            $("#buttons-view").append(d);  // Adds the button to the buttons-view div
+         
+            $(".buttons-view").append(d);  // Adds the button to the buttons-view div
+  
         }
     }
 
-        $("#get-inspired").on("click", function(event) {
-            $("#get-inspired").empty(); 
-            event.preventDefault();
-        
-            var des = $("#designer-input").val().trim();
-            topics.push(des); // Adds designer from the textbox to our array
-            renderButtons();
-        });
+    $("#get-inspired").on("click", function(event) {
+      $("#get-inspired").empty(); 
+      event.preventDefault();
+      
+      var des = $("#designer-input").val().toUpperCase().trim();
+    
+      topics.push(des); // Adds designer from the textbox to our array
+      renderButtons();
+  });
     
 
       // Addes a click event listener to all elements with a class of "designer-btn"
@@ -115,6 +118,11 @@ Render Buttons
       // Calls the renderButtons function to display the intial buttons
       renderButtons();
 
+      if ($(".dropdown").css("display") === "none"){
+      $("#main-buttons").show(); 
+      } else {
+        $("#main-buttons").hide(); 
+      }
 /*
 ========================================
 Pause gifs

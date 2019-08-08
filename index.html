@@ -9,14 +9,16 @@
 
          <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
         <!-- External Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Cinzel|Raleway:100&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Diplomata+SC|Text+Me+One&display=swap" rel="stylesheet">
 
         <!-- Css Style Sheets -->
         <link rel="stylesheet" href="assets/css/reset.css">
         <link rel="stylesheet" href="assets/css/style.css">
-        <!-- <link rel="stylesheet" href="assets/css/media_screens.css"> -->
+        <link rel="stylesheet" href="assets/css/media_screens.css">
 
     </head>
     <body> 
@@ -41,43 +43,54 @@
         <!-- Main Section -->
         <main class="background"> 
            
+            <div class="masterContainer ">
             <div class="container2 text-center title"> 
                 <!-- Header -->
                 <div class="row d-flex flex-column flex-md-row align-items-center padding">
-                    <h1 class="my-0 mr-md-auto">Giphy Generator</h1> 
+                    <h1 class="my-0 mr-md-auto">GIPHY GENERATOR</h1> 
                     <div class="form-group row my-2 my-md-0 mr-md-0">
-                            <form id="designer-form">
-                                <label for="artist-input"></label>
+                            <form id="designer-form" style="max-width: 45%"></form>
+                                <label for="designer-input"></label>
                                 <input type="text" id="designer-input">
                             </form>
-                            <input id="get-inspired" type="submit" value="Get Inspired">   
-                      
-                    </div>
+                            <input  id="get-inspired" type="submit" value="GET INSPIRED"> 
+                            <div role="presentation" class="dropdown">
+                                    <a  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <span class="glyphicon glyphicon-triangle-bottom"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                            <li><a>Favorites <span class="glyphicon glyphicon-heart"></span></a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li class="buttons-view"></li>
+                                    </ul>
+                                </div>  
+                        
+                            </div>
+                        </div>
                 </div>
-            </div>
             <div class="container3 text-center"> 
 
                 <!-- Giphy & Search Container -->
-                <div class="row d-flex flex-column flex-md-row text-top padding2"> 
+                <div class="row d-flex flex-column flex-md-row text-top padding2" style="max-width: 960px"> 
                     
                     <!-- Left side -->
-                    <div class="col-lg-4" style="max-width: 33%"> 
+                    <div id="main-buttons" class="col-lg-4" style="max-width: 33%"> 
                         <!-- Buttons List -->
-                        <div>
+                        
                              <!-- Rendered Buttons will get Dumped Here  -->
-                            <div id="buttons-view"></div>
+                            <div class="buttons-view"></div>
                         </div>
-                    </div>  
+                    
 
                     <!-- Right Side - Giphy Grid -->
-                    <div class="row designer1" style="max-width: 67%">
-                     <!-- Movies will Get Dumped Here -->
-                        <div class="align-items-between" id="designer-view"></div>
+                    <div class="row designer1" style="max-width: 66%">
+                     <!-- Giphs will Get Dumped Here -->
+                        <div  id="designer-view"></div>
                     </div>
                   
                 </div>
             </div>  
-
+        </div>
         </main>
 
         <!-- Footer Section -->
